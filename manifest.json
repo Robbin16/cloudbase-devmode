@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "cloudbase devmode",
+  "version": "1.0",
+  "description": "tea console enter devmode",
+  "icons": {
+    "16": "images/cloud.png",
+    "32": "images/cloud.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "browsingData"],
+  "host_permissions": ["https://console.cloud.tencent.com/*"],
+  "content_scripts": [
+    {
+      "js": ["script/jquery-3.6.1.js", "script/content.js"],
+      "matches": ["https://console.cloud.tencent.com/*"]
+    }
+  ]
+}
